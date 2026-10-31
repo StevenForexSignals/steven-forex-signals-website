@@ -4,122 +4,353 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Steven Forex Signals</title>
+<meta name="theme-color" content="#080d18">
+<title>Steven Forex Signals | Trade Smarter</title>
+<meta name="description" content="Forex swing trading signals, market analysis and trading education from Steven Forex Signals.">
+
 <style>
+:root {
+  --bg:#080d18;
+  --panel:#111b2b;
+  --panel2:#172438;
+  --green:#19d49a;
+  --gold:#d6ad55;
+  --white:#f4f7fb;
+  --muted:#9baabe;
+  --border:#26354a;
+}
 * {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
 body {
   font-family:Arial,sans-serif;
-  background:#08111f;
-  color:white;
-  line-height:1.6;
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.7;
 }
+a {text-decoration:none;color:inherit}
 header {
-  padding:22px 7%;
+  background:#0d1523;
+  border-bottom:1px solid var(--border);
+  padding:17px 6%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  background:#101d30;
+  justify-content:space-between;
+  gap:15px;
+  position:sticky;
+  top:0;
+  z-index:10;
 }
-.logo {color:#21d4a0;font-size:21px;font-weight:bold}
-nav a {color:white;text-decoration:none;margin-left:15px;font-size:13px}
+.logo {
+  color:var(--green);
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+nav {display:flex;gap:19px;flex-wrap:wrap}
+nav a {font-size:13px;color:#c2ccda}
+nav a:hover {color:var(--green)}
 .hero {
+  padding:100px 7% 85px;
   text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(135deg,#102b40,#08111f);
+  background:radial-gradient(ellipse at top,#19364a 0%,#0b1423 55%,#080d18 100%);
 }
-.hero h1 {font-size:38px;margin-bottom:15px}
-.hero h1 span {color:#21d4a0}
-.hero p {color:#b8c5d6;margin-bottom:25px}
+.tag {
+  display:inline-block;
+  color:var(--gold);
+  border:1px solid #69562e;
+  border-radius:30px;
+  padding:6px 16px;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:22px;
+}
+.hero h1 {
+  font-size:clamp(34px,6vw,58px);
+  line-height:1.2;
+  max-width:850px;
+  margin:0 auto 20px;
+}
+.hero h1 span {color:var(--green)}
+.hero p {
+  color:var(--muted);
+  max-width:620px;
+  margin:0 auto 30px;
+}
 .btn {
   display:inline-block;
-  background:#21d4a0;
-  color:#08111f;
-  padding:13px 25px;
+  padding:13px 24px;
   border-radius:6px;
-  text-decoration:none;
   font-weight:bold;
+  margin:5px;
+  background:var(--green);
+  color:#06140f;
 }
-section {padding:55px 7%;text-align:center}
-h2 {margin-bottom:25px;font-size:27px}
+.btn-outline {
+  background:transparent;
+  border:1px solid var(--gold);
+  color:var(--gold);
+}
+section {padding:70px 7%}
+.section-title {text-align:center;margin-bottom:35px}
+.section-title h2 {font-size:30px;margin-bottom:8px}
+.section-title p {color:var(--muted)}
+.green {color:var(--green)}
+.gold {color:var(--gold)}
 .cards {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+  gap:20px;
 }
 .card {
-  background:#14243a;
+  background:var(--panel);
   padding:25px;
-  border-radius:10px;
-  border:1px solid #263a50;
+  border:1px solid var(--border);
+  border-radius:12px;
 }
-.card h3 {color:#21d4a0;margin-bottom:10px}
-.card p {color:#bdc9d8}
+.card h3 {color:var(--green);margin-bottom:10px}
+.card p {color:var(--muted);font-size:14px}
+.symbol {font-size:27px;margin-bottom:12px}
 .signal {
-  background:#14243a;
-  max-width:600px;
+  max-width:700px;
   margin:auto;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
   padding:25px;
-  border-radius:10px;
+}
+.signal-head {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+.status {
+  color:var(--gold);
+  border:1px solid #69562e;
+  border-radius:20px;
+  padding:3px 12px;
+  font-size:12px;
+}
+.signal-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.signal-item {
+  background:var(--panel2);
+  padding:13px;
+  border-radius:7px;
+}
+.signal-item small {
+  display:block;
+  color:var(--muted);
+}
+.signal-item strong {font-size:16px}
+.notice {
+  color:var(--muted);
+  font-size:12px;
+  margin-top:17px;
+}
+.analysis {
+  background:linear-gradient(120deg,#111e30,#172438);
+  border:1px solid var(--border);
+  padding:35px;
+  border-radius:12px;
+  text-align:center;
+}
+.analysis p {color:var(--muted)}
+.pricing {
+  text-align:center;
+  border-color:#705c30;
+}
+.price {
+  color:var(--gold);
+  font-size:30px;
+  font-weight:bold;
+  margin:15px 0;
+}
+.contact {
+  background:#101c2c;
+  text-align:center;
 }
 footer {
+  background:#060b13;
+  border-top:1px solid var(--border);
+  padding:30px 7%;
   text-align:center;
-  padding:25px;
-  background:#101d30;
-  color:#aab8ca;
+  color:var(--muted);
+  font-size:13px;
+}
+footer strong {color:var(--green)}
+@media(max-width:600px) {
+  header {align-items:flex-start;flex-direction:column}
+  nav {gap:13px}
+  .hero {padding:75px 6%}
+  section {padding:55px 6%}
+  .signal-grid {grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">STEVEN FOREX SIGNALS</div>
+  <div class="logo">STEVEN FX.</div>
   <nav>
     <a href="#home">Home</a>
-    <a href="#services">Services</a>
     <a href="#signals">Signals</a>
+    <a href="#analysis">Analysis</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<main>
+
 <div class="hero" id="home">
-  <h1>Trade Smarter with <span>Steven Forex Signals</span></h1>
-  <p>Forex market analysis, trading signals and educational insights.</p>
-  <a class="btn" href="#signals">Explore Signals</a>
+  <div class="tag">PRECISION • DISCIPLINE • CONSISTENCY</div>
+  <h1>Trade the Markets with <span>Confidence.</span></h1>
+  <p>
+    Welcome to Steven Forex Signals.
+    Your destination for forex swing trading ideas,
+    market analysis and trading education.
+  </p>
+  <a href="#signals" class="btn">Explore Signals</a>
+  <a href="#services" class="btn btn-outline">Our Services</a>
 </div>
 
 <section id="services">
-  <h2>What We Offer</h2>
+  <div class="section-title">
+    <h2>What We <span class="green">Offer</span></h2>
+    <p>Tools and insights for disciplined forex traders.</p>
+  </div>
+
   <div class="cards">
     <div class="card">
+      <div class="symbol">📊</div>
       <h3>Forex Signals</h3>
-      <p>Structured trading ideas with entry, stop loss and take profit levels.</p>
+      <p>Structured trade ideas with entry, stop loss and take profit levels.</p>
     </div>
+
     <div class="card">
+      <div class="symbol">📈</div>
       <h3>Market Analysis</h3>
-      <p>Technical analysis and important market opportunities.</p>
+      <p>Technical analysis, market structure and currency opportunities.</p>
     </div>
+
     <div class="card">
+      <div class="symbol">🎯</div>
+      <h3>Swing Trading</h3>
+      <p>Focus on quality setups, patience and multi-day trading opportunities.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">📚</div>
       <h3>Trading Education</h3>
-      <p>Learn risk management, trading strategies and market structure.</p>
+      <p>Learn risk management, technical analysis and trading discipline.</p>
     </div>
   </div>
 </section>
 
 <section id="signals">
-  <h2>Latest Trading Signals</h2>
+  <div class="section-title">
+    <h2>Latest <span class="green">Trading Signals</span></h2>
+    <p>Our trade ideas will be published here.</p>
+  </div>
+
   <div class="signal">
-    <h3 style="color:#21d4a0">Coming Soon</h3>
-    <p>Our latest verified trading ideas will be published here.</p>
+    <div class="signal-head">
+      <h3>Forex Signal Board</h3>
+      <span class="status">AWAITING FIRST SIGNAL</span>
+    </div>
+
+    <div class="signal-grid">
+      <div class="signal-item">
+        <small>Currency Pair</small>
+        <strong>To be updated</strong>
+      </div>
+      <div class="signal-item">
+        <small>Direction</small>
+        <strong>BUY / SELL</strong>
+      </div>
+      <div class="signal-item">
+        <small>Entry Price</small>
+        <strong>Pending</strong>
+      </div>
+      <div class="signal-item">
+        <small>Stop Loss</small>
+        <strong>Pending</strong>
+      </div>
+      <div class="signal-item">
+        <small>Take Profit 1</small>
+        <strong>Pending</strong>
+      </div>
+      <div class="signal-item">
+        <small>Take Profit 2</small>
+        <strong>Pending</strong>
+      </div>
+    </div>
+
+    <p class="notice">
+      This is a sample layout, not a live trading recommendation.
+      Trade ideas will be added after analysis.
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>Trade With Discipline</h2>
-  <p>Protect your capital. Manage your risk. Stay patient.</p>
+<section id="analysis">
+  <div class="section-title">
+    <h2>Market <span class="green">Analysis</span></h2>
+    <p>Understand the market before taking a position.</p>
+  </div>
+
+  <div class="analysis">
+    <h3 class="gold">The Trader's Approach</h3>
+    <p>
+      We focus on market structure, support and resistance,
+      trend direction and risk management.
+      Quality setups matter more than the number of trades.
+    </p>
+  </div>
 </section>
 
+<section id="membership">
+  <div class="section-title">
+    <h2>Premium <span class="gold">Membership</span></h2>
+    <p>Information about membership will be announced soon.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card pricing">
+      <h3 class="gold">Premium Access</h3>
+      <div class="price">Coming Soon</div>
+      <p>Trading signals, market insights and educational resources.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Connect With <span class="green">Steven Forex Signals</span></h2>
+    <p>
+      Stay connected for market updates, trading ideas
+      and future announcements.
+    </p>
+  </div>
+  <p class="gold">Official contact details coming soon.</p>
+</section>
+
+</main>
+
 <footer>
+  <p><strong>STEVEN FOREX SIGNALS</strong></p>
+  <p>Trade Smarter. Stay Disciplined.</p>
   <p>© 2026 Steven Forex Signals. All rights reserved.</p>
-  <p>Forex trading involves risk. Signals are educational, not financial advice.</p>
+  <p class="notice">
+    Forex trading involves substantial risk.
+    All content is for educational purposes and is not financial advice.
+  </p>
 </footer>
 
 </body>
